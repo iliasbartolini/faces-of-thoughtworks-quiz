@@ -24,7 +24,7 @@ get '/quiz' do
 
   @total = Crowd.total
   @progress = cookies[:right].to_i
-  return erb :game_over if @progress >= @total #just in case...
+  return erb :game_over if @progress >= @total
 
   @to_guess = Crowd.random(:to_exclude => to_array(cookies[:to_exclude]))
   @pics = (Crowd.get(:gender => @to_guess.gender, :quantity => 3, :pick => @to_guess) << @to_guess).shuffle
@@ -44,7 +44,7 @@ post '/guess' do
     redirect '/quiz'
   end
 
-  ScoreBoard.record_guess person_to_guess.id, guess
+  #ScoreBoard.record_guess person_to_guess.id, guess
   cookies[:wrong] = add_to_string(1, cookies[:wrong])
   response.headers['correctnes'] = 'n'
 end
