@@ -30,7 +30,7 @@ body {
   -ms-transition: all 0.5s ease;
   transition: all 0.5s ease;
   margin: 20px;
-  border: #FEFF87 solid 10px;
+  border: #fc0 solid 10px;
 }
 
 .tw_face:hover {
@@ -39,7 +39,7 @@ body {
   -o-transform: rotate(-5deg);
   -ms-transform: rotate(-5deg);
   transform: rotate(-5deg);
-  border: #FEFF30 solid 12px;
+  border: #fc0 solid 12px;
 }
 
 #restart {
@@ -48,8 +48,8 @@ body {
   display: inline-block;
   margin: 10px 0px 20px 0px;
   border-radius: 5px;
-  border: #003399 solid 1px;
-  background: 003399;
+  border: #039 solid 2px;
+  background: #87A5E0;
   text-decoration: none;
   color: black;
 }
